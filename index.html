@@ -3,21 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="ControlPanel.png" type="image/webp" />
+    <link rel="icon" href="ControlPanel.webp" type="image/webp" />
     <title>Control Panel</title>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-Q8899MK340"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-Q8899MK340");
-    </script>
 
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap");
@@ -40,7 +27,7 @@
       body {
         background-color: var(--bg-color);
         color: var(--text-light);
-        padding-top: 130px;
+        padding-top: 145px; 
         scroll-behavior: smooth;
       }
 
@@ -86,12 +73,8 @@
           transparent
         );
       }
-      .nav-wrapper.show-right-glow::before {
-        opacity: 1;
-      }
-      .nav-wrapper.show-left-glow::after {
-        opacity: 1;
-      }
+      .nav-wrapper.show-right-glow::before { opacity: 1; }
+      .nav-wrapper.show-left-glow::after { opacity: 1; }
 
       nav {
         display: flex;
@@ -103,16 +86,10 @@
         -webkit-overflow-scrolling: touch;
       }
 
-      nav::-webkit-scrollbar {
-        display: none;
-      }
+      nav::-webkit-scrollbar { display: none; }
 
-      .a-nav:first-of-type {
-        margin-right: auto;
-      }
-      .a-nav:last-of-type {
-        margin-left: auto;
-      }
+      .a-nav:first-of-type { margin-right: auto; }
+      .a-nav:last-of-type { margin-left: auto; }
 
       .a-nav {
         text-decoration: none;
@@ -129,7 +106,6 @@
         margin-bottom: 5px;
       }
 
-      /* حجم 60 بكسل للأيقونات */
       .a-nav img {
         width: 60px;
         height: 60px;
@@ -139,18 +115,10 @@
       }
 
       /* كلاسات خيارات صور الأقسام */
-      .cat-shape-circle {
-        border-radius: 50%;
-      }
-      .cat-shape-original {
-        border-radius: 8px;
-      }
-      .cat-border-gold {
-        border: 2px solid var(--gold);
-      }
-      .cat-border-none {
-        border: none;
-      }
+      .cat-shape-circle { border-radius: 50% !important; }
+      .cat-shape-original { border-radius: 8px !important; }
+      .cat-border-gold { border: 2px solid var(--gold) !important; }
+      .cat-border-none { border: 2px solid transparent !important; } 
 
       .a-nav::after {
         content: "";
@@ -164,9 +132,7 @@
         transition: width 0.3s ease;
       }
 
-      .a-nav:hover::after {
-        width: 100%;
-      }
+      .a-nav:hover::after { width: 100%; }
 
       /* زر إضافة قسم */
       .add-category-btn h2 {
@@ -193,9 +159,7 @@
         text-align: center;
         margin: 20px 0 40px;
       }
-      .header-logo img {
-        width: 200px;
-      }
+      .header-logo img { width: 200px; }
 
       .empty-state-msg {
         text-align: center;
@@ -208,9 +172,7 @@
       /* حاوية القسم مع أزرار التحكم */
       .category-section {
         margin-bottom: 40px;
-        transition:
-          transform 0.3s ease,
-          box-shadow 0.3s ease;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         border-radius: 20px;
       }
 
@@ -234,7 +196,7 @@
       .section-controls {
         display: flex;
         gap: 10px;
-        direction: rtl;
+        direction: rtl; 
       }
       .section-controls button {
         background-color: var(--card-bg);
@@ -262,7 +224,6 @@
         padding: 0 10px;
       }
 
-      /* الكرت الثابت */
       .meal-card {
         background-color: var(--card-bg);
         border-radius: 15px;
@@ -276,21 +237,8 @@
         transition: box-shadow 0.3s ease;
       }
 
-      /* كلاس التوهج بعد الحركة */
       .highlight-glow {
         box-shadow: 0 0 20px rgba(202, 172, 94, 0.9) !important;
-        z-index: 50;
-      }
-
-      /* كلاسات التمييز للاتجاهات */
-      .hint-move-right {
-        transform: translateX(20px) !important;
-        box-shadow: 0 0 15px rgba(202, 172, 94, 0.8) !important;
-        z-index: 50;
-      }
-      .hint-move-left {
-        transform: translateX(-20px) !important;
-        box-shadow: 0 0 15px rgba(202, 172, 94, 0.8) !important;
         z-index: 50;
       }
 
@@ -316,7 +264,7 @@
         border: none;
         color: #ddd;
         cursor: pointer;
-        font-size: 20px;
+        font-size: 20px; 
         transition: 0.2s;
       }
       .card-top-controls button:hover,
@@ -406,6 +354,36 @@
         font-weight: bold;
       }
 
+      /* زر إعدادات الوجبة العشوائية */
+      .random-btn-container {
+        text-align: center;
+        margin: 60px 0;
+      }
+
+      #randomSettingsBtn {
+        font-size: 23px;
+        width: auto;
+        padding: 0 20px;
+        height: 48px;
+        background-color: #f7f5f5;
+        border-top: solid 3px white;
+        border-left: solid 3px white;
+        border-right: solid 5px black;
+        border-bottom: solid 5px black;
+        cursor: pointer;
+        font-family: 'Tajawal', sans-serif;
+        font-weight: bold;
+        transition: 0.2s;
+        color: black;
+      }
+
+      #randomSettingsBtn:active {
+        border-right: solid 3px white;
+        border-bottom: solid 3px white;
+        border-top: solid 5px black;
+        border-left: solid 5px black;
+      }
+
       /* عداد الصور العائم */
       .image-counter-box {
         position: fixed;
@@ -476,6 +454,40 @@
         font-weight: bold;
       }
 
+      /* تصميم كبسولة الخيارات (Segmented Controls) */
+      .segmented-control {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.4);
+        border: 1px solid var(--gold);
+        border-radius: 50px;
+        padding: 4px;
+        width: 100%;
+        max-width: 240px; 
+        margin: 0 auto;
+      }
+
+      .segmented-control input[type="radio"] {
+        display: none; 
+      }
+
+      .segmented-control label {
+        flex: 1;
+        text-align: center;
+        padding: 8px 10px;
+        margin: 0;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: bold;
+        color: #ccc;
+        transition: all 0.3s ease;
+      }
+
+      .segmented-control input[type="radio"]:checked + label {
+        background-color: var(--gold);
+        color: #111;
+      }
+
       .input-group input[type="text"],
       .input-group input[type="number"],
       .input-group textarea {
@@ -494,9 +506,7 @@
         min-height: 80px;
       }
 
-      .hidden-file-input {
-        display: none;
-      }
+      .hidden-file-input { display: none; }
 
       .custom-file-label {
         display: inline-block;
@@ -516,30 +526,32 @@
         background-color: rgba(202, 172, 94, 0.1);
       }
 
-      /* تنسيق اسم الملف الطويل */
       .file-name-display {
         display: block;
-        margin-top: 8px;
+        margin: 8px auto 0;
         font-size: 13px;
         color: #ccc;
         text-align: center;
-        direction: ltr; /* يساعد في الحفاظ على الصيغة في النهاية .png */
+        direction: ltr; 
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        max-width: 100%;
+        max-width: 200px; 
       }
 
-      /* معاينة الصورة بالنص */
+      .image-preview-container {
+        display: none;
+        margin: 10px auto 0;
+        object-fit: cover;
+      }
+
       #catImagePreview {
         width: 60px;
         height: 60px;
         object-fit: cover;
         margin: 10px auto 0;
         display: none;
-        transition:
-          border-radius 0.3s,
-          border 0.3s; /* انتقال ناعم لما تغير الشكل */
+        transition: border-radius 0.3s, border 0.3s; 
       }
 
       #dishImagePreview {
@@ -552,34 +564,13 @@
         border: 2px solid var(--gold);
       }
 
-      /* حاوية الخيارات المخفية (الشكل والحدود) */
       #catImageOptionsWrapper {
-        display: none; /* مخفي افتراضيا */
+        display: none; 
         flex-direction: column;
-        gap: 8px;
+        gap: 10px;
         align-items: center;
         margin: 15px auto 0;
-        width: max-content;
-      }
-
-      .radio-group-options {
-        display: flex;
-        gap: 15px;
-        justify-content: center;
-        background-color: rgba(255, 255, 255, 0.1);
-        padding: 8px 15px;
-        border-radius: 8px;
-        border: 1px dashed var(--gold);
-      }
-
-      .radio-group-options label {
-        margin-bottom: 0;
-        font-weight: normal;
-        cursor: pointer;
-        font-size: 15px;
-        display: flex;
-        align-items: center;
-        gap: 5px;
+        width: 100%;
       }
 
       .modal-btns {
@@ -600,74 +591,55 @@
         transition: 0.2s;
       }
 
-      .btn-save {
-        background-color: var(--gold);
-        color: #111;
+      .btn-save { background-color: var(--gold); color: #111; }
+      .btn-save:hover { background-color: #dcc482; }
+      .btn-cancel { background-color: #ccc; color: #333; }
+      .btn-cancel:hover { background-color: #bbb; }
+      .btn-danger { background-color: #e74c3c !important; color: white !important; }
+      .btn-danger:hover { background-color: #c0392b !important; }
+
+      /* لستة الوجبات العشوائية */
+      .random-pool-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(0,0,0,0.2);
+        padding: 8px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        color: white;
       }
-      .btn-save:hover {
-        background-color: #dcc482;
-      }
-      .btn-cancel {
-        background-color: #ccc;
-        color: #333;
-      }
-      .btn-cancel:hover {
-        background-color: #bbb;
-      }
-      .btn-danger {
-        background-color: #e74c3c !important;
-        color: white !important;
-      }
-      .btn-danger:hover {
-        background-color: #c0392b !important;
+      .random-pool-item button {
+        background: #e74c3c;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 2px 8px;
+        cursor: pointer;
       }
 
       @media (min-width: 570px) {
-        .menu-grid {
-          gap: 25px;
-          padding: 0 20px;
-        }
-        .add-dish-card,
-        .meal-card {
-          flex: 0 0 calc(33.333% - 20px);
-          border-radius: 20px;
-          min-height: 320px;
-        }
-        .meal-title {
-          font-size: 24px;
-        }
-        .meal-price {
-          font-size: 24px;
-        }
-        summary {
-          font-size: 20px;
-        }
-        .meal-details {
-          font-size: 16px;
-        }
+        .menu-grid { gap: 25px; padding: 0 20px; }
+        .add-dish-card, .meal-card { flex: 0 0 calc(33.333% - 20px); border-radius: 20px; min-height: 320px; }
+        .meal-title { font-size: 24px; }
+        .meal-price { font-size: 24px; }
+        summary { font-size: 20px; }
+        .meal-details { font-size: 16px; }
       }
 
       @media (min-width: 1024px) {
-        .add-dish-card,
-        .meal-card {
-          flex: 0 0 calc(25% - 20px);
-        }
+        .add-dish-card, .meal-card { flex: 0 0 calc(25% - 20px); }
       }
     </style>
   </head>
   <body>
-    <!-- عداد الصور العائم -->
     <div id="imageCounterBox" class="image-counter-box">
-      <span id="imageCounterText">0 / 100</span> صورة
+        <span id="imageCounterText">0 / 100</span> صورة
     </div>
 
     <div class="nav-wrapper" id="navWrapper">
       <nav id="mainNav">
-        <a
-          class="a-nav add-category-btn"
-          id="addCategoryBtn"
-          onclick="openCategoryModal()"
-        >
+        <a class="a-nav add-category-btn" id="addCategoryBtn" onclick="openCategoryModal()">
           <h2>
             <span class="text-add">إضافة قسم</span>
             <span class="icon-add">+</span>
@@ -686,6 +658,11 @@
       </div>
     </div>
 
+        <!-- زر إعدادات الوجبة العشوائية -->
+    <div class="random-btn-container" id="randomBtnContainer" style="display: none;">
+        <button id="randomSettingsBtn" onclick="openRandomSettingsModal()">وجبة عشوائية</button>
+    </div>
+
     <!-- ================= شاشات النوافذ المنبثقة ================= -->
 
     <!-- شاشة القسم -->
@@ -694,65 +671,39 @@
         <h3 id="catModalTitle">إضافة قسم جديد</h3>
         <div class="input-group">
           <label>اسم القسم:</label>
-          <input
-            type="text"
-            id="catNameInput"
-            placeholder="مثال: وجبات، مشروبات..."
-          />
+          <input type="text" id="catNameInput" placeholder="مثال: وجبات، مشروبات..." />
         </div>
-
+        
         <div class="input-group">
           <label>صورة القسم:</label>
-          <input
-            type="file"
-            id="catImageInput"
-            class="hidden-file-input"
-            accept="image/*"
-          />
-          <label for="catImageInput" class="custom-file-label"
-            >اختر صورة القسم</label
-          >
-          <span id="catFileName" class="file-name-display"
-            >لم يتم اختيار أي ملف</span
-          >
-
-          <img
-            id="catImagePreview"
-            src=""
-            alt="معاينة"
-            class="cat-shape-circle cat-border-gold"
-          />
-
-          <!-- خيارات شكل الصورة (تظهر فقط عند وجود صورة) -->
+          <input type="file" id="catImageInput" class="hidden-file-input" accept="image/*" />
+          <label for="catImageInput" class="custom-file-label">اختر صورة القسم</label>
+          <span id="catFileName" class="file-name-display">لم يتم اختيار أي ملف</span>
+          
+          <img id="catImagePreview" src="" alt="معاينة" class="cat-shape-circle cat-border-gold" />
+          
           <div id="catImageOptionsWrapper">
-            <div class="radio-group-options">
-              <label
-                ><input type="radio" name="catShape" value="circle" checked />
-                دائري</label
-              >
-              <label
-                ><input type="radio" name="catShape" value="original" />
-                مربع</label
-              >
-            </div>
-            <div class="radio-group-options">
-              <label
-                ><input type="radio" name="catBorder" value="gold" checked /> مع
-                حدود</label
-              >
-              <label
-                ><input type="radio" name="catBorder" value="none" /> بدون
-                حدود</label
-              >
-            </div>
+              <div class="segmented-control">
+                  <input type="radio" id="shapeCircle" name="catShape" value="circle" checked>
+                  <label for="shapeCircle">دائري</label>
+
+                  <input type="radio" id="shapeOriginal" name="catShape" value="original">
+                  <label for="shapeOriginal">مربع</label>
+              </div>
+
+              <div class="segmented-control">
+                  <input type="radio" id="borderGold" name="catBorder" value="gold" checked>
+                  <label for="borderGold">مع حدود</label>
+
+                  <input type="radio" id="borderNone" name="catBorder" value="none">
+                  <label for="borderNone">بدون حدود</label>
+              </div>
           </div>
         </div>
 
         <div class="modal-btns">
           <button class="btn-save" onclick="saveCategory()">حفظ</button>
-          <button class="btn-cancel" onclick="closeCategoryModal()">
-            إلغاء
-          </button>
+          <button class="btn-cancel" onclick="closeCategoryModal()">إلغاء</button>
         </div>
       </div>
     </div>
@@ -763,43 +714,22 @@
         <h3 id="dishModalTitle">إضافة طبق جديد</h3>
         <div class="input-group">
           <label>اسم الطبق:</label>
-          <input
-            type="text"
-            id="dishNameInput"
-            placeholder="مثال: وجبة برجر لحم"
-          />
+          <input type="text" id="dishNameInput" placeholder="مثال: وجبة برجر لحم" />
         </div>
         <div class="input-group">
           <label>السعر (KWD):</label>
-          <input
-            type="number"
-            step="0.050"
-            id="dishPriceInput"
-            placeholder="مثال: 2.250"
-          />
+          <input type="number" step="0.050" id="dishPriceInput" placeholder="مثال: 2.250" />
         </div>
         <div class="input-group">
           <label>التفاصيل (اختياري):</label>
-          <textarea
-            id="dishDetailsInput"
-            placeholder="اكتب تفاصيل ومكونات الطبق هنا..."
-          ></textarea>
+          <textarea id="dishDetailsInput" placeholder="اكتب تفاصيل ومكونات الطبق هنا..."></textarea>
         </div>
         <div class="input-group">
           <label>صورة الطبق:</label>
-          <input
-            type="file"
-            id="dishImageInput"
-            class="hidden-file-input"
-            accept="image/*"
-          />
-          <label for="dishImageInput" class="custom-file-label"
-            >اختر صورة الطبق</label
-          >
-          <span id="dishFileName" class="file-name-display"
-            >لم يتم اختيار أي ملف</span
-          >
-          <img id="dishImagePreview" src="" alt="معاينة" />
+          <input type="file" id="dishImageInput" class="hidden-file-input" accept="image/*" />
+          <label for="dishImageInput" class="custom-file-label">اختر صورة الطبق</label>
+          <span id="dishFileName" class="file-name-display">لم يتم اختيار أي ملف</span>
+          <img id="dishImagePreview" class="image-preview-container" src="" alt="معاينة" />
         </div>
         <div class="modal-btns">
           <button class="btn-save" onclick="saveDish()">حفظ</button>
@@ -808,18 +738,32 @@
       </div>
     </div>
 
+
+    <!-- شاشة إعدادات الوجبة العشوائية -->
+    <div class="modal-overlay" id="randomSettingsModal">
+        <div class="modal-content">
+            <h3>إعدادات زر وجبة عشوائية</h3>
+            <p style="font-size: 14px; color: #ccc; margin-bottom: 15px;">اكتب اسم الطبق لإضافته إلى زر (وجبة عشوائية).</p>
+            <div class="input-group">
+                <input type="text" id="randomDishInput" placeholder="مثال: وجبة برجر لحم" />
+                <button onclick="addDishToRandomPool()" style="margin-top: 10px; width: 100%; padding: 10px; background: var(--gold); border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-family: inherit; font-size: 16px;">إضافة</button>
+            </div>
+            <div id="randomPoolList" style="text-align: right; margin-top: 15px; max-height: 150px; overflow-y: auto; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: rgba(255,255,255,0.1);">
+                <!-- الأطباق المختارة ستظهر هنا -->
+            </div>
+            <div class="modal-btns">
+                <button class="btn-cancel" onclick="closeRandomSettingsModal()">إغلاق</button>
+            </div>
+        </div>
+    </div>
+
     <!-- شاشة الحذف المخصصة -->
     <div class="modal-overlay" id="deleteModal">
-      <div class="modal-content" style="max-width: 350px">
-        <h3 style="color: #e74c3c">تأكيد الحذف</h3>
-        <p
-          id="deleteModalMsg"
-          style="font-size: 18px; margin-bottom: 25px; line-height: 1.5"
-        ></p>
+      <div class="modal-content" style="max-width: 350px;">
+        <h3 style="color: #e74c3c;">تأكيد الحذف</h3>
+        <p id="deleteModalMsg" style="font-size: 18px; margin-bottom: 25px; line-height: 1.5;"></p>
         <div class="modal-btns">
-          <button class="btn-save btn-danger" onclick="confirmDelete()">
-            حذف
-          </button>
+          <button class="btn-save btn-danger" onclick="confirmDelete()">حذف</button>
           <button class="btn-cancel" onclick="closeDeleteModal()">إلغاء</button>
         </div>
       </div>
@@ -829,31 +773,28 @@
       let currentCatImageBase64 = "";
       let currentDishImageBase64 = "";
       const MAX_TOTAL_IMAGES = 100;
-      let isMoving = false;
+      let isMoving = false; 
+      let randomMealPool = []; 
 
       function updateImageCounter() {
-        const totalImages = document.querySelectorAll(
-          "#mainNav .a-nav:not(.add-category-btn) img, .meal-card img",
-        ).length;
-        const counterBox = document.getElementById("imageCounterBox");
-        const counterText = document.getElementById("imageCounterText");
-
-        counterText.textContent = `${totalImages} / 100`;
-        if (totalImages >= MAX_TOTAL_IMAGES) {
-          counterBox.classList.add("limit-reached");
-        } else {
-          counterBox.classList.remove("limit-reached");
-        }
-        return totalImages;
+          const totalImages = document.querySelectorAll('#mainNav .a-nav:not(.add-category-btn) img, .meal-card img').length;
+          const counterBox = document.getElementById('imageCounterBox');
+          const counterText = document.getElementById('imageCounterText');
+          
+          counterText.textContent = `${totalImages} / 100`;
+          if(totalImages >= MAX_TOTAL_IMAGES) {
+              counterBox.classList.add('limit-reached');
+          } else {
+              counterBox.classList.remove('limit-reached');
+          }
+          return totalImages;
       }
 
       function compressImage(file, callback) {
         if (file.size <= 600 * 1024) {
           const reader = new FileReader();
           reader.readAsDataURL(file);
-          reader.onload = function (event) {
-            callback(event.target.result);
-          };
+          reader.onload = function (event) { callback(event.target.result); };
           return;
         }
         const reader = new FileReader();
@@ -866,7 +807,7 @@
             const ctx = canvas.getContext("2d");
             let width = img.width;
             let height = img.height;
-            const MAX_WIDTH = 1080;
+            const MAX_WIDTH = 1080; 
             if (width > MAX_WIDTH) {
               height = Math.round(height * (MAX_WIDTH / width));
               width = MAX_WIDTH;
@@ -874,85 +815,64 @@
             canvas.width = width;
             canvas.height = height;
             ctx.drawImage(img, 0, 0, width, height);
-            const compressedDataUrl = canvas.toDataURL("image/webp", 0.85);
+            const compressedDataUrl = canvas.toDataURL("image/webp", 0.85); 
             callback(compressedDataUrl);
           };
         };
       }
 
-      // تحديث المعاينة الحية للأقسام
       function updateCatPreviewClasses() {
-        const shape = document.querySelector(
-          'input[name="catShape"]:checked',
-        ).value;
-        const border = document.querySelector(
-          'input[name="catBorder"]:checked',
-        ).value;
-        const preview = document.getElementById("catImagePreview");
-
-        preview.className = "image-preview-container";
-        preview.classList.add(
-          shape === "circle" ? "cat-shape-circle" : "cat-shape-original",
-        );
-        preview.classList.add(
-          border === "gold" ? "cat-border-gold" : "cat-border-none",
-        );
+          const shape = document.querySelector('input[name="catShape"]:checked').value;
+          const border = document.querySelector('input[name="catBorder"]:checked').value;
+          const preview = document.getElementById('catImagePreview');
+          
+          preview.className = ''; 
+          preview.classList.add(shape === 'circle' ? 'cat-shape-circle' : 'cat-shape-original');
+          preview.classList.add(border === 'gold' ? 'cat-border-gold' : 'cat-border-none');
       }
 
-      document
-        .querySelectorAll('input[name="catShape"], input[name="catBorder"]')
-        .forEach((radio) => {
-          radio.addEventListener("change", updateCatPreviewClasses);
-        });
+      document.querySelectorAll('input[name="catShape"], input[name="catBorder"]').forEach(radio => {
+          radio.addEventListener('change', updateCatPreviewClasses);
+      });
 
       function formatFileName(name) {
-        if (!name) return "لم يتم اختيار أي ملف";
-        return name.length > 30 ? name.substring(0, 27) + "..." : name;
+          if (!name) return 'لم يتم اختيار أي ملف';
+          return name.length > 25 ? name.substring(0, 22) + '...' : name;
       }
 
-      document
-        .getElementById("catImageInput")
-        .addEventListener("change", function (e) {
+      document.getElementById("catImageInput").addEventListener("change", function (e) {
           const file = e.target.files[0];
-          document.getElementById("catFileName").textContent = formatFileName(
-            file ? file.name : null,
-          );
+          document.getElementById("catFileName").textContent = formatFileName(file ? file.name : null);
           const preview = document.getElementById("catImagePreview");
-          const optionsWrapper = document.getElementById(
-            "catImageOptionsWrapper",
-          );
+          const optionsWrapper = document.getElementById("catImageOptionsWrapper");
 
           if (file) {
-            compressImage(file, function (dataUrl) {
-              currentCatImageBase64 = dataUrl;
-              preview.src = dataUrl;
-              preview.style.display = "block";
-              optionsWrapper.style.display = "flex";
-              updateCatPreviewClasses();
+            compressImage(file, function(dataUrl) {
+                currentCatImageBase64 = dataUrl;
+                preview.src = dataUrl;
+                preview.style.display = "block";
+                optionsWrapper.style.display = "flex";
+                updateCatPreviewClasses();
             });
           } else {
             currentCatImageBase64 = "";
             if (!editTargetCategory) {
-              preview.style.display = "none";
-              optionsWrapper.style.display = "none";
+                preview.style.display = "none";
+                optionsWrapper.style.display = "none";
             }
           }
         });
 
-      document
-        .getElementById("dishImageInput")
-        .addEventListener("change", function (e) {
+      document.getElementById("dishImageInput").addEventListener("change", function (e) {
           const file = e.target.files[0];
-          document.getElementById("dishFileName").textContent = formatFileName(
-            file ? file.name : null,
-          );
+          document.getElementById("dishFileName").textContent = formatFileName(file ? file.name : null);
           const preview = document.getElementById("dishImagePreview");
-
+          
           if (file) {
-            compressImage(file, function (dataUrl) {
-              currentDishImageBase64 = dataUrl;
-              preview.src = dataUrl;
-              preview.style.display = "block";
+            compressImage(file, function(dataUrl) {
+                currentDishImageBase64 = dataUrl;
+                preview.src = dataUrl;
+                preview.style.display = "block";
             });
           } else {
             currentDishImageBase64 = "";
@@ -966,119 +886,80 @@
       let editTargetDish = null;
       let itemToDelete = null;
 
-      // ================= دوال التحكم في الأقسام =================
       function openCategoryModal(catId = null) {
         document.getElementById("categoryModal").style.display = "flex";
         editTargetCategory = catId ? document.getElementById(catId) : null;
         const preview = document.getElementById("catImagePreview");
-        const optionsWrapper = document.getElementById(
-          "catImageOptionsWrapper",
-        );
+        const optionsWrapper = document.getElementById("catImageOptionsWrapper");
 
         if (editTargetCategory) {
           document.getElementById("catModalTitle").textContent = "تعديل القسم";
-          const titleElem =
-            editTargetCategory.querySelector(".section-title em");
-          document.getElementById("catNameInput").value = titleElem.textContent
-            .replace(/~/g, "")
-            .trim();
-          document.getElementById("catFileName").textContent =
-            "اختر صورة جديدة";
+          const titleElem = editTargetCategory.querySelector(".section-title em");
+          document.getElementById("catNameInput").value = titleElem.textContent.replace(/~/g, "").trim();
+          document.getElementById("catFileName").textContent = "اختر صورة جديدة";
 
-          const navLink = document.querySelector(
-            `.a-nav[href="#${editTargetCategory.id}"]`,
-          );
+          const navLink = document.querySelector(`.a-nav[href="#${editTargetCategory.id}"]`);
           const navImg = navLink.querySelector("img");
-
-          // استرجاع الخيارات القديمة
-          document.querySelector(
-            `input[name="catShape"][value="${navImg.classList.contains("cat-shape-original") ? "original" : "circle"}"]`,
-          ).checked = true;
-          document.querySelector(
-            `input[name="catBorder"][value="${navImg.classList.contains("cat-border-none") ? "none" : "gold"}"]`,
-          ).checked = true;
+          
+          document.querySelector(`input[name="catShape"][value="${navImg.classList.contains('cat-shape-original') ? 'original' : 'circle'}"]`).checked = true;
+          document.querySelector(`input[name="catBorder"][value="${navImg.classList.contains('cat-border-none') ? 'none' : 'gold'}"]`).checked = true;
 
           preview.src = navImg.src;
           preview.style.display = "block";
           optionsWrapper.style.display = "flex";
           updateCatPreviewClasses();
 
-          currentCatImageBase64 = "";
+          currentCatImageBase64 = ""; 
         } else {
-          document.getElementById("catModalTitle").textContent =
-            "إضافة قسم جديد";
+          document.getElementById("catModalTitle").textContent = "إضافة قسم جديد";
           document.getElementById("catNameInput").value = "";
           document.getElementById("catImageInput").value = "";
-          document.getElementById("catFileName").textContent =
-            "لم يتم اختيار أي ملف";
-
-          document.querySelector(
-            'input[name="catShape"][value="circle"]',
-          ).checked = true;
-          document.querySelector(
-            'input[name="catBorder"][value="gold"]',
-          ).checked = true;
+          document.getElementById("catFileName").textContent = "لم يتم اختيار أي ملف";
+          
+          document.querySelector('input[name="catShape"][value="circle"]').checked = true;
+          document.querySelector('input[name="catBorder"][value="gold"]').checked = true;
 
           preview.src = "";
           preview.style.display = "none";
           optionsWrapper.style.display = "none";
           updateCatPreviewClasses();
-
+          
           currentCatImageBase64 = "";
         }
       }
 
-      function closeCategoryModal() {
-        document.getElementById("categoryModal").style.display = "none";
-      }
+      function closeCategoryModal() { document.getElementById("categoryModal").style.display = "none"; }
 
       function saveCategory() {
         const name = document.getElementById("catNameInput").value;
-        const shape = document.querySelector(
-          'input[name="catShape"]:checked',
-        ).value;
-        const border = document.querySelector(
-          'input[name="catBorder"]:checked',
-        ).value;
+        const shape = document.querySelector('input[name="catShape"]:checked').value;
+        const border = document.querySelector('input[name="catBorder"]:checked').value;
 
-        if (!name) {
-          alert("يرجى كتابة اسم القسم");
-          return;
-        }
-        if (!editTargetCategory && !currentCatImageBase64) {
-          alert("يرجى اختيار صورة للقسم الجديد");
-          return;
-        }
-
+        if (!name) { alert("يرجى كتابة اسم القسم"); return; }
+        if (!editTargetCategory && !currentCatImageBase64) { alert("يرجى اختيار صورة للقسم الجديد"); return; }
+        
         if (!editTargetCategory && updateImageCounter() >= MAX_TOTAL_IMAGES) {
-          alert("عذراً، لقد وصلت للحد الأقصى من الصور المسموحة (100 صورة).");
-          return;
+            alert('عذراً، لقد وصلت للحد الأقصى من الصور المسموحة (100 صورة).');
+            return;
         }
 
-        const shapeClass =
-          shape === "circle" ? "cat-shape-circle" : "cat-shape-original";
-        const borderClass =
-          border === "gold" ? "cat-border-gold" : "cat-border-none";
+        const shapeClass = shape === 'circle' ? 'cat-shape-circle' : 'cat-shape-original';
+        const borderClass = border === 'gold' ? 'cat-border-gold' : 'cat-border-none';
         const imgClasses = `${shapeClass} ${borderClass}`;
 
         document.getElementById("emptyMessage").style.display = "none";
+        document.getElementById("randomBtnContainer").style.display = "block";
 
         if (editTargetCategory) {
-          editTargetCategory.querySelector(".section-title em").textContent =
-            `~ ${name} ~`;
-          const navLink = document.querySelector(
-            `.a-nav[href="#${editTargetCategory.id}"]`,
-          );
+          editTargetCategory.querySelector(".section-title em").textContent = `~ ${name} ~`;
+          const navLink = document.querySelector(`.a-nav[href="#${editTargetCategory.id}"]`);
           const imgElem = navLink.querySelector("img");
-
-          if (currentCatImageBase64) {
-            imgElem.src = currentCatImageBase64;
-          }
+          
+          if (currentCatImageBase64) { imgElem.src = currentCatImageBase64; }
           imgElem.className = imgClasses;
-
+          
           const imgHTML = imgElem.outerHTML;
-          navLink.querySelector("h2").innerHTML =
-            `<span style="font-size: 21px; margin-bottom: 5px; display:block;">${name}</span>${imgHTML}`;
+          navLink.querySelector("h2").innerHTML = `<span style="font-size: 21px; margin-bottom: 5px; display:block;">${name}</span>${imgHTML}`;
         } else {
           categoryCount++;
           const sectionId = "category-" + categoryCount;
@@ -1088,10 +969,7 @@
           newNavBtn.className = "a-nav";
           newNavBtn.href = "#" + sectionId;
           newNavBtn.innerHTML = `<h2><span style="font-size: 21px; margin-bottom: 5px; display:block;">${name}</span><img src="${currentCatImageBase64}" class="${imgClasses}" alt="${name}"></h2>`;
-          mainNav.insertBefore(
-            newNavBtn,
-            document.getElementById("addCategoryBtn"),
-          );
+          mainNav.insertBefore(newNavBtn, document.getElementById("addCategoryBtn"));
 
           const appContainer = document.getElementById("appContainer");
           const sectionWrapper = document.createElement("div");
@@ -1123,31 +1001,24 @@
       }
 
       function moveCategory(catId, direction) {
-        if (isMoving) return;
+        if(isMoving) return;
         isMoving = true;
-
+        
         const section = document.getElementById(catId);
         const appContainer = document.getElementById("appContainer");
         const navLink = document.querySelector(`.a-nav[href="#${catId}"]`);
         const mainNav = document.getElementById("mainNav");
 
-        // انتقال فوري
         if (direction === -1) {
           const prevSection = section.previousElementSibling;
-          if (
-            prevSection &&
-            prevSection.classList.contains("category-section")
-          ) {
+          if (prevSection && prevSection.classList.contains("category-section")) {
             appContainer.insertBefore(section, prevSection);
             const prevNav = navLink.previousElementSibling;
             if (prevNav) mainNav.insertBefore(navLink, prevNav);
           }
         } else {
           const nextSection = section.nextElementSibling;
-          if (
-            nextSection &&
-            nextSection.classList.contains("category-section")
-          ) {
+          if (nextSection && nextSection.classList.contains("category-section")) {
             appContainer.insertBefore(nextSection, section);
             const nextNav = navLink.nextElementSibling;
             if (nextNav && !nextNav.classList.contains("add-category-btn")) {
@@ -1156,15 +1027,13 @@
           }
         }
 
-        // تطبيق توهج النقل
-        section.classList.add("highlight-glow");
-        setTimeout(() => {
-          section.classList.remove("highlight-glow");
-          isMoving = false;
+        section.classList.add('highlight-glow');
+        setTimeout(() => { 
+            section.classList.remove('highlight-glow');
+            isMoving = false; 
         }, 300);
       }
 
-      // ================= دوال التحكم في الأطباق =================
       function openDishModal(gridId, cardElem = null) {
         currentActiveGridId = gridId;
         editTargetDish = cardElem;
@@ -1172,31 +1041,23 @@
 
         if (editTargetDish) {
           document.getElementById("dishModalTitle").textContent = "تعديل الطبق";
-          document.getElementById("dishNameInput").value =
-            editTargetDish.querySelector(".meal-title").textContent;
-          document.getElementById("dishPriceInput").value = parseFloat(
-            editTargetDish.querySelector(".meal-price span").textContent,
-          );
+          document.getElementById("dishNameInput").value = editTargetDish.querySelector(".meal-title").textContent;
+          document.getElementById("dishPriceInput").value = parseFloat(editTargetDish.querySelector(".meal-price span").textContent);
 
           const detailsElem = editTargetDish.querySelector(".meal-details");
-          document.getElementById("dishDetailsInput").value = detailsElem
-            ? detailsElem.textContent
-            : "";
-          document.getElementById("dishFileName").textContent =
-            "اختر صورة جديدة";
+          document.getElementById("dishDetailsInput").value = detailsElem ? detailsElem.textContent : "";
+          document.getElementById("dishFileName").textContent = "اختر صورة جديدة";
 
           preview.src = editTargetDish.querySelector("img").src;
           preview.style.display = "block";
           currentDishImageBase64 = "";
         } else {
-          document.getElementById("dishModalTitle").textContent =
-            "إضافة طبق جديد";
+          document.getElementById("dishModalTitle").textContent = "إضافة طبق جديد";
           document.getElementById("dishNameInput").value = "";
           document.getElementById("dishPriceInput").value = "";
           document.getElementById("dishDetailsInput").value = "";
           document.getElementById("dishImageInput").value = "";
-          document.getElementById("dishFileName").textContent =
-            "لم يتم اختيار أي ملف";
+          document.getElementById("dishFileName").textContent = "لم يتم اختيار أي ملف";
           preview.src = "";
           preview.style.display = "none";
           currentDishImageBase64 = "";
@@ -1204,29 +1065,32 @@
         document.getElementById("dishModal").style.display = "flex";
       }
 
-      function closeDishModal() {
-        document.getElementById("dishModal").style.display = "none";
-      }
+      function closeDishModal() { document.getElementById("dishModal").style.display = "none"; }
 
       function saveDish() {
-        const name = document.getElementById("dishNameInput").value;
-        const price = parseFloat(
-          document.getElementById("dishPriceInput").value,
-        ).toFixed(3);
+        const name = document.getElementById("dishNameInput").value.trim();
+        const price = parseFloat(document.getElementById("dishPriceInput").value).toFixed(3);
         const details = document.getElementById("dishDetailsInput").value;
 
-        if (!name || !price || isNaN(price)) {
-          alert("يرجى تعبئة الاسم والسعر");
-          return;
-        }
-        if (!editTargetDish && !currentDishImageBase64) {
-          alert("يرجى اختيار صورة للطبق الجديد");
-          return;
-        }
+        if (!name || !price || isNaN(price)) { alert("يرجى تعبئة الاسم والسعر"); return; }
+        if (!editTargetDish && !currentDishImageBase64) { alert("يرجى اختيار صورة للطبق الجديد"); return; }
 
         if (!editTargetDish && updateImageCounter() >= MAX_TOTAL_IMAGES) {
-          alert("عذراً، لقد وصلت للحد الأقصى من الصور المسموحة (100 صورة).");
-          return;
+            alert('عذراً، لقد وصلت للحد الأقصى من الصور المسموحة (100 صورة).');
+            return;
+        }
+
+        const existingDishes = Array.from(document.querySelectorAll('.meal-title')).map(t => t.textContent.trim());
+        if (!editTargetDish && existingDishes.includes(name)) {
+            alert('عذراً، لا يمكن إضافة طبقين بنفس الاسم! يرجى تغيير اسم الطبق.');
+            return;
+        }
+        if (editTargetDish) {
+            const oldName = editTargetDish.querySelector('.meal-title').textContent.trim();
+            if (oldName !== name && existingDishes.includes(name)) {
+                alert('عذراً، لا يمكن تغيير الاسم لاسم طبق آخر موجود مسبقاً بالمنيو!');
+                return;
+            }
         }
 
         let imageUrl = currentDishImageBase64;
@@ -1246,8 +1110,8 @@
 
         const innerHTMLContent = `
                 <div class="card-top-controls">
+                  <button onclick="openDishModal('${currentActiveGridId}', this.closest('.meal-card'))" title="تعديل">✏️</button>
                     <button onclick="openDeleteDish(this)" title="حذف">🗑️</button>
-                    <button onclick="openDishModal('${currentActiveGridId}', this.closest('.meal-card'))" title="تعديل">✏️</button>
                 </div>
                 <img src="${imageUrl}" alt="${name}">
                 <h3 class="meal-title">${name}</h3>
@@ -1261,6 +1125,11 @@
 
         if (editTargetDish) {
           editTargetDish.innerHTML = innerHTMLContent;
+          const oldName = editTargetDish.querySelector('.meal-title').textContent.trim();
+          if (oldName !== name && randomMealPool.includes(oldName)) {
+              randomMealPool[randomMealPool.indexOf(oldName)] = name;
+              renderRandomPoolList();
+          }
         } else {
           const dishCard = document.createElement("div");
           dishCard.className = "meal-card";
@@ -1277,113 +1146,154 @@
       }
 
       function moveDish(btnElem, direction) {
-        if (isMoving) return;
+        if(isMoving) return;
         isMoving = true;
-
+        
         const card = btnElem.closest(".meal-card");
         const grid = card.parentElement;
 
-        // انتقال فوري للمكان الجديد
         if (direction === -1) {
           const prevCard = card.previousElementSibling;
-          if (prevCard) {
-            grid.insertBefore(card, prevCard);
-          }
+          if (prevCard) { grid.insertBefore(card, prevCard); }
         } else {
           const nextCard = card.nextElementSibling;
           if (nextCard && !nextCard.classList.contains("add-dish-card")) {
-            grid.insertBefore(nextCard, card);
+              grid.insertBefore(nextCard, card);
           }
         }
+        
+        card.classList.add('highlight-glow');
+        refreshArrows(); 
 
-        // تشغيل توهج النقل
-        card.classList.add("highlight-glow");
-        refreshArrows();
-
-        setTimeout(() => {
-          card.classList.remove("highlight-glow");
-          isMoving = false;
+        setTimeout(() => { 
+            card.classList.remove('highlight-glow');
+            isMoving = false; 
         }, 300);
       }
 
-      // ================= دوال الحذف المخصصة =================
+      function openRandomSettingsModal() {
+          document.getElementById('randomSettingsModal').style.display = 'flex';
+          document.getElementById('randomDishInput').value = '';
+          renderRandomPoolList();
+      }
+
+      function closeRandomSettingsModal() {
+          document.getElementById('randomSettingsModal').style.display = 'none';
+      }
+
+      function addDishToRandomPool() {
+          const inputVal = document.getElementById('randomDishInput').value.trim();
+          if(!inputVal) { alert('يرجى كتابة اسم الطبق.'); return; }
+
+          const existingDishes = Array.from(document.querySelectorAll('.meal-title')).map(t => t.textContent.trim());
+          
+          if(!existingDishes.includes(inputVal)) {
+              alert('هذا الطبق غير موجود في المنيو! يرجى التأكد من كتابة الاسم بشكل صحيح.');
+              return;
+          }
+
+          if(randomMealPool.includes(inputVal)) {
+              alert('هذا الطبق موجود مسبقاً في قائمة السحب.');
+              return;
+          }
+
+          randomMealPool.push(inputVal);
+          document.getElementById('randomDishInput').value = '';
+          renderRandomPoolList();
+      }
+
+      function removeDishFromRandomPool(dishName) {
+          randomMealPool = randomMealPool.filter(name => name !== dishName);
+          renderRandomPoolList();
+      }
+
+      function renderRandomPoolList() {
+          const listContainer = document.getElementById('randomPoolList');
+          if(randomMealPool.length === 0) {
+              listContainer.innerHTML = '<div style="color:#aaa; text-align:center;">القائمة فارغة حالياً</div>';
+              return;
+          }
+
+          listContainer.innerHTML = randomMealPool.map(name => `
+              <div class="random-pool-item">
+                  <span>${name}</span>
+                  <button onclick="removeDishFromRandomPool('${name}')">إزالة</button>
+              </div>
+          `).join('');
+      }
+
       function openDeleteCategory(catId, name) {
-        itemToDelete = { type: "category", id: catId };
-        document.getElementById("deleteModalMsg").textContent =
-          `هل أنت متأكد من حذف قسم (${name}) بجميع أطباقه؟`;
-        document.getElementById("deleteModal").style.display = "flex";
+          itemToDelete = { type: 'category', id: catId };
+          document.getElementById('deleteModalMsg').textContent = `هل أنت متأكد من حذف قسم (${name}) بجميع أطباقه؟`;
+          document.getElementById('deleteModal').style.display = 'flex';
       }
 
       function openDeleteDish(btnElem) {
-        const card = btnElem.closest(".meal-card");
-        const name = card.querySelector(".meal-title").textContent;
-        itemToDelete = { type: "dish", element: card };
-        document.getElementById("deleteModalMsg").textContent =
-          `هل أنت متأكد من حذف طبق (${name})؟`;
-        document.getElementById("deleteModal").style.display = "flex";
+          const card = btnElem.closest('.meal-card');
+          const name = card.querySelector('.meal-title').textContent;
+          itemToDelete = { type: 'dish', element: card, name: name };
+          document.getElementById('deleteModalMsg').textContent = `هل أنت متأكد من حذف طبق (${name})؟`;
+          document.getElementById('deleteModal').style.display = 'flex';
       }
 
       function closeDeleteModal() {
-        document.getElementById("deleteModal").style.display = "none";
-        itemToDelete = null;
+          document.getElementById('deleteModal').style.display = 'none';
+          itemToDelete = null;
       }
 
       function confirmDelete() {
-        if (itemToDelete.type === "category") {
-          document.getElementById(itemToDelete.id).remove();
-          const navLink = document.querySelector(
-            `.a-nav[href="#${itemToDelete.id}"]`,
-          );
-          if (navLink) navLink.remove();
+          if(itemToDelete.type === 'category') {
+              const categoryNode = document.getElementById(itemToDelete.id);
+              const dishTitles = Array.from(categoryNode.querySelectorAll('.meal-title')).map(t => t.textContent.trim());
+              randomMealPool = randomMealPool.filter(name => !dishTitles.includes(name));
 
-          if (document.querySelectorAll(".category-section").length === 0) {
-            document.getElementById("emptyMessage").style.display = "block";
+              categoryNode.remove();
+              const navLink = document.querySelector(`.a-nav[href="#${itemToDelete.id}"]`);
+              if(navLink) navLink.remove();
+              
+              if(document.querySelectorAll('.category-section').length === 0) {
+                  document.getElementById('emptyMessage').style.display = 'block';
+                  document.getElementById("randomBtnContainer").style.display = "none";
+              }
+              updateNavGlow();
+          } else if(itemToDelete.type === 'dish') {
+              randomMealPool = randomMealPool.filter(name => name !== itemToDelete.name);
+              itemToDelete.element.remove();
+              refreshArrows();
           }
-          updateNavGlow();
-        } else if (itemToDelete.type === "dish") {
-          itemToDelete.element.remove();
-          refreshArrows();
-        }
-        closeDeleteModal();
-        updateImageCounter();
+          closeDeleteModal();
+          updateImageCounter(); 
       }
 
-      // ================= تحديث الأسهم (الأسهم الذكية) =================
       function refreshArrows() {
-        document.querySelectorAll(".menu-grid").forEach((grid) => {
-          const cards = Array.from(grid.querySelectorAll(".meal-card"));
-          cards.forEach((card, index) => {
-            const btnRight = card.querySelector(".btn-right-arrow");
-            const btnLeft = card.querySelector(".btn-left-arrow");
-            if (!btnRight || !btnLeft) return;
+        document.querySelectorAll('.menu-grid').forEach(grid => {
+            const cards = Array.from(grid.querySelectorAll('.meal-card'));
+            cards.forEach((card, index) => {
+                const btnRight = card.querySelector('.btn-right-arrow');
+                const btnLeft = card.querySelector('.btn-left-arrow');
+                if(!btnRight || !btnLeft) return;
 
-            btnRight.style.visibility = "visible";
-            btnLeft.style.visibility = "visible";
+                btnRight.style.visibility = 'visible';
+                btnLeft.style.visibility = 'visible';
+                
+                btnRight.title = "يمين"; btnRight.textContent = "▶️";
+                btnLeft.title = "يسار"; btnLeft.textContent = "◀️";
 
-            btnRight.title = "يمين";
-            btnRight.textContent = "▶️";
-            btnLeft.title = "يسار";
-            btnLeft.textContent = "◀️";
+                const isFirstInRow = index === 0 || card.offsetTop > cards[index - 1].offsetTop;
+                if (isFirstInRow) {
+                    btnRight.title = "أعلى";
+                    btnRight.textContent = "🔼";
+                }
 
-            const isFirstInRow =
-              index === 0 || card.offsetTop > cards[index - 1].offsetTop;
-            if (isFirstInRow) {
-              btnRight.title = "أعلى";
-              btnRight.textContent = "🔼";
-            }
-
-            const isLastInRow =
-              index === cards.length - 1 ||
-              cards[index + 1].offsetTop > card.offsetTop;
-            if (isLastInRow) {
-              btnLeft.title = "أسفل";
-              btnLeft.textContent = "🔽";
-            }
-          });
+                const isLastInRow = index === cards.length - 1 || cards[index + 1].offsetTop > card.offsetTop;
+                if (isLastInRow) {
+                    btnLeft.title = "أسفل";
+                    btnLeft.textContent = "🔽";
+                }
+            });
         });
       }
 
-      // --- التوهج الذهبي ---
       const nav = document.getElementById("mainNav");
       const navWrapper = document.getElementById("navWrapper");
 
@@ -1396,24 +1306,20 @@
         const navRect = nav.getBoundingClientRect();
         const firstItem = nav.firstElementChild;
         const lastItem = nav.lastElementChild;
-        const canScrollRight =
-          firstItem.getBoundingClientRect().right > navRect.right + 5;
-        const canScrollLeft =
-          lastItem.getBoundingClientRect().left < navRect.left - 5;
+        const canScrollRight = firstItem.getBoundingClientRect().right > navRect.right + 5;
+        const canScrollLeft = lastItem.getBoundingClientRect().left < navRect.left - 5;
         if (canScrollRight) navWrapper.classList.add("show-right-glow");
         else navWrapper.classList.remove("show-right-glow");
         if (canScrollLeft) navWrapper.classList.add("show-left-glow");
         else navWrapper.classList.remove("show-left-glow");
       }
-
+      
       nav.addEventListener("scroll", updateNavGlow);
       window.addEventListener("resize", () => {
-        updateNavGlow();
-        refreshArrows();
+          updateNavGlow();
+          refreshArrows(); 
       });
       updateNavGlow();
-
-      // تشغيل العداد أول مرة
       updateImageCounter();
     </script>
   </body>
