@@ -52,7 +52,7 @@
             justify-content: center;
             gap: 10px;
             margin-bottom: 30px;
-            flex-wrap: wrap; /* للتجاوب مع الشاشات الصغيرة */
+            flex-wrap: wrap;
         }
 
         .tab-btn {
@@ -74,7 +74,6 @@
             transform: translateY(-2px);
         }
 
-        /* شكل الزر عند تحديده */
         .tab-btn.active {
             background-color: var(--primary-color);
             color: white;
@@ -84,16 +83,15 @@
 
         /* حاوية الأيام */
         .schedule-content {
-            max-width: 800px; /* تصغير العرض لأننا نعرض يوماً واحداً */
+            max-width: 800px;
             margin: 0 auto;
         }
 
         .day-panel {
-            display: none; /* إخفاء جميع الأيام افتراضياً */
-            animation: fadeIn 0.4s ease; /* تأثير ظهور سلس */
+            display: none;
+            animation: fadeIn 0.4s ease;
         }
 
-        /* إظهار اليوم النشط */
         .day-panel.active {
             display: flex;
             flex-direction: column;
@@ -105,7 +103,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* بطاقة المادة الدراسية (نفس التنسيق السابق) */
+        /* بطاقة المادة الدراسية */
         .class-card {
             background: white;
             border-radius: 10px;
@@ -152,6 +150,8 @@
 
         .class-info strong {
             color: #555;
+            display: inline-block;
+            width: 65px; /* لترتيب النصوص تحت بعضها */
         }
 
         .final-exam {
@@ -176,7 +176,6 @@
 
     <!-- شريط أزرار الأيام -->
     <div class="tabs-container">
-        <!-- أضفنا class="active" للأحد ليكون هو المفتوح افتراضياً -->
         <button class="tab-btn active" onclick="openDay('sunday', this)">الأحد</button>
         <button class="tab-btn" onclick="openDay('monday', this)">الإثنين</button>
         <button class="tab-btn" onclick="openDay('tuesday', this)">الثلاثاء</button>
@@ -191,14 +190,16 @@
             <div class="class-card geo">
                 <h3 class="class-title">مختبر جيولوجيا</h3>
                 <div class="class-time">2:00pm - 4:50pm</div>
-                <div class="class-info"><strong>المكان:</strong> الشدادية (SCI-N) B2-013</div>
+                <div class="class-info"><strong>المكان:</strong> الشدادية (شمالي SCI-N)</div>
+                <div class="class-info"><strong>القاعة:</strong> الطابق 1، قاعة B2-013</div>
                 <div class="class-info"><strong>الأستاذ:</strong> ناصر القطان (افتراضاً)</div>
                 <div class="final-exam">الفاينل: يحدد لاحقاً</div>
             </div>
             <div class="class-card chem">
                 <h3 class="class-title">كيمياء عامة (1)</h3>
                 <div class="class-time">7:00pm - 7:50pm</div>
-                <div class="class-info"><strong>المكان:</strong> الفنطاس - مبنى 1</div>
+                <div class="class-info"><strong>المكان:</strong> الفنطاس</div>
+                <div class="class-info"><strong>القاعة:</strong> مبنى 1</div>
                 <div class="class-info"><strong>الأستاذ:</strong> Faculty Member</div>
                 <div class="final-exam">الفاينل: 29/12/2026 (09:00 - 11:00)</div>
             </div>
@@ -209,14 +210,16 @@
             <div class="class-card geo">
                 <h3 class="class-title">مبادئ جيولوجيا</h3>
                 <div class="class-time">11:00am - 12:15pm</div>
-                <div class="class-info"><strong>المكان:</strong> الشدادية (SCI-S) C2-200</div>
+                <div class="class-info"><strong>المكان:</strong> الشدادية (جنوبي SCI-S)</div>
+                <div class="class-info"><strong>القاعة:</strong> الطابق 2، قاعة C2-200</div>
                 <div class="class-info"><strong>الأستاذ:</strong> ناصر محمود القطان</div>
                 <div class="final-exam">الفاينل: 26/12/2026 (12:00 - 14:00)</div>
             </div>
             <div class="class-card phys">
                 <h3 class="class-title">فيزياء عامة (1)</h3>
                 <div class="class-time">2:00pm - 3:15pm</div>
-                <div class="class-info"><strong>المكان:</strong> الشدادية (SCI-S) C2-204</div>
+                <div class="class-info"><strong>المكان:</strong> الشدادية (جنوبي SCI-S)</div>
+                <div class="class-info"><strong>القاعة:</strong> الطابق 1، قاعة C2-204</div>
                 <div class="class-info"><strong>الأستاذ:</strong> Faculty Member</div>
                 <div class="final-exam">الفاينل: 28/12/2026 (15:00 - 17:00)</div>
             </div>
@@ -227,14 +230,16 @@
             <div class="class-card chem">
                 <h3 class="class-title">كيمياء (1) TU</h3>
                 <div class="class-time">12:00pm - 12:50pm</div>
-                <div class="class-info"><strong>المكان:</strong> الشدادية (SCI-N) B2-003</div>
+                <div class="class-info"><strong>المكان:</strong> الشدادية (شمالي SCI-N)</div>
+                <div class="class-info"><strong>القاعة:</strong> الطابق 2، قاعة B2-003</div>
                 <div class="class-info"><strong>الأستاذ:</strong> عبدالرحمن متعب العازمي</div>
                 <div class="final-exam">الفاينل: راجع القسم</div>
             </div>
             <div class="class-card chem">
                 <h3 class="class-title">كيمياء عامة (1)</h3>
                 <div class="class-time">7:00pm - 7:50pm</div>
-                <div class="class-info"><strong>المكان:</strong> الفنطاس - مبنى 1</div>
+                <div class="class-info"><strong>المكان:</strong> الفنطاس</div>
+                <div class="class-info"><strong>القاعة:</strong> مبنى 1</div>
                 <div class="class-info"><strong>الأستاذ:</strong> Faculty Member</div>
                 <div class="final-exam">الفاينل: 29/12/2026 (09:00 - 11:00)</div>
             </div>
@@ -245,14 +250,16 @@
             <div class="class-card geo">
                 <h3 class="class-title">مبادئ جيولوجيا</h3>
                 <div class="class-time">11:00am - 12:15pm</div>
-                <div class="class-info"><strong>المكان:</strong> الشدادية (SCI-S) C2-200</div>
+                <div class="class-info"><strong>المكان:</strong> الشدادية (جنوبي SCI-S)</div>
+                <div class="class-info"><strong>القاعة:</strong> الطابق 2، قاعة C2-200</div>
                 <div class="class-info"><strong>الأستاذ:</strong> ناصر محمود القطان</div>
                 <div class="final-exam">الفاينل: 26/12/2026 (12:00 - 14:00)</div>
             </div>
             <div class="class-card phys">
                 <h3 class="class-title">فيزياء عامة (1)</h3>
                 <div class="class-time">2:00pm - 3:15pm</div>
-                <div class="class-info"><strong>المكان:</strong> الشدادية (SCI-S) C2-204</div>
+                <div class="class-info"><strong>المكان:</strong> الشدادية (جنوبي SCI-S)</div>
+                <div class="class-info"><strong>القاعة:</strong> الطابق 1، قاعة C2-204</div>
                 <div class="class-info"><strong>الأستاذ:</strong> Faculty Member</div>
                 <div class="final-exam">الفاينل: 28/12/2026 (15:00 - 17:00)</div>
             </div>
@@ -263,21 +270,24 @@
             <div class="class-card chem">
                 <h3 class="class-title">م. كيمياء عامة (1)</h3>
                 <div class="class-time">09:00am - 11:50am</div>
-                <div class="class-info"><strong>المكان:</strong> الشدادية (SCI-N)</div>
+                <div class="class-info"><strong>المكان:</strong> الشدادية (شمالي SCI-N)</div>
+                <div class="class-info"><strong>القاعة:</strong> راجع القسم</div>
                 <div class="class-info"><strong>الأستاذ:</strong> عبدالرحمن متعب العازمي</div>
                 <div class="final-exam">الفاينل: راجع القسم</div>
             </div>
             <div class="class-card phys">
                 <h3 class="class-title">مختبر فيزياء عامة (1)</h3>
                 <div class="class-time">12:00pm - 4:50pm</div>
-                <div class="class-info"><strong>المكان:</strong> الشدادية (SCI-N) B1-152</div>
+                <div class="class-info"><strong>المكان:</strong> الشدادية (شمالي SCI-N)</div>
+                <div class="class-info"><strong>القاعة:</strong> الطابق 2، قاعة B1-152</div>
                 <div class="class-info"><strong>الأستاذ:</strong> فاطمه مجبل الدوسري</div>
                 <div class="final-exam">الفاينل: راجع القسم</div>
             </div>
             <div class="class-card chem">
                 <h3 class="class-title">كيمياء عامة (1)</h3>
                 <div class="class-time">7:00pm - 7:50pm</div>
-                <div class="class-info"><strong>المكان:</strong> الفنطاس - مبنى 1</div>
+                <div class="class-info"><strong>المكان:</strong> الفنطاس</div>
+                <div class="class-info"><strong>القاعة:</strong> مبنى 1</div>
                 <div class="class-info"><strong>الأستاذ:</strong> Faculty Member</div>
                 <div class="final-exam">الفاينل: 29/12/2026 (09:00 - 11:00)</div>
             </div>
